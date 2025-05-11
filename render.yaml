@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_HOST
+        value: https://ahmgan8n-on-render.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://ahmgan8n-on-render.onrender.com
+      - key: GENERIC_TIMEZONE
+        value: Europe/Berlin
+      - key: DB_TYPE
+        value: sqlite
